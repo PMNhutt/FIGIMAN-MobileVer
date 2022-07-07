@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blue"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/icon_back"
+            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_left_24"
+            android:layout_centerVertical="true"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đăng Kí"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white_text"
+            android:layout_toEndOf="@+id/icon_back"
+            android:layout_marginStart="10dp"/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

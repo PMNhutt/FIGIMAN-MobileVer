@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blurdarkbackkground"
+    tools:context=".Register">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:id="@+id/top_bar_register"
+        android:background="@color/blue_500">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:id="@+id/back_to_login"
+            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_left_24"
+            android:layout_centerVertical="true"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đăng Ký"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white_text"
+            android:layout_toEndOf="@+id/back_to_login"
+            android:layout_marginStart="10dp"/>
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/username"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/top_bar_register"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Nhập tài khoản"
+        android:textColor="@color/white_text"
+        android:textColorHint="@color/white_text"
+        app:hintTextColor="@color/white_text"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:startIconDrawable="@drawable/ic_baseline_account_circle_24"
+        app:endIconMode="clear_text"
+        app:startIconTint="@color/white_text"
+        app:endIconTint="@color/white_text"
+        app:boxStrokeColor="@color/white_text"
+        app:boxCornerRadiusTopEnd="5dp"
+        app:boxCornerRadiusTopStart="5dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white_500"
+            android:textColor="@color/white_text"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:id="@+id/username_register"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/username"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Nhập mật khẩu"
+        android:textColor="@color/white_text"
+        android:textColorHint="@color/white_text"
+        app:hintTextColor="@color/white_text"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/white_text"
+        app:startIconTint="@color/white_text"
+        app:boxStrokeColor="@color/white_text"
+        app:boxCornerRadiusTopEnd="5dp"
+        app:boxCornerRadiusTopStart="5dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/white_text"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:inputType="textPassword"
+            android:backgroundTint="@color/white_500"
+            android:id="@+id/password_register"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/passwordConfirm"-->
+<!--        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_below="@id/password"-->
+<!--        android:layout_marginStart="30dp"-->
+<!--        android:layout_marginEnd="30dp"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:hint="Xác nhận mật khẩu"-->
+<!--        android:textColor="@color/white_text"-->
+<!--        android:textColorHint="@color/white_text"-->
+<!--        app:hintTextColor="@color/white_text"-->
+<!--        android:textSize="20dp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:startIconDrawable="@drawable/ic_baseline_lock_24"-->
+<!--        app:endIconMode="password_toggle"-->
+<!--        app:endIconTint="@color/white_text"-->
+<!--        app:startIconTint="@color/white_text"-->
+<!--        app:boxStrokeColor="@color/white_text"-->
+<!--        app:boxCornerRadiusTopEnd="5dp"-->
+<!--        app:boxCornerRadiusTopStart="5dp"-->
+<!--        >-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:textColor="@color/white_text"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="20sp"-->
+<!--            android:inputType="textPassword"-->
+<!--            android:backgroundTint="@color/white_500"-->
+<!--            />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_below="@id/password"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="5dp"
+        android:text="Đăng Kí"
+        android:textColor="#7AFFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="#31FFFFFF"
+        app:strokeColor="@color/white_text"
+        app:strokeWidth="1dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/loginwith"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register"
+        android:layout_centerHorizontal="true"
+        android:text="Hoặc"
+        android:textColor="@color/white_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/socialicon"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_below="@id/loginwith"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="30dp"
+            app:srcCompat="@drawable/googleicon" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/google"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="30dp"
+            android:text="Tiếp tục với Google"
+            android:textColor="#ffffff"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/blue"
+            app:cornerRadius="0dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/socialiconfb"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_below="@id/socialicon"
+        android:layout_centerHorizontal="true">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="30dp"
+            app:srcCompat="@drawable/fbicon" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/facebook"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="30dp"
+            android:text="Tiếp tục với facebook"
+            android:textColor="#ffffff"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/blue"
+            app:cornerRadius="0dp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
