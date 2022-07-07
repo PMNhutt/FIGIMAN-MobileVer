@@ -37,8 +37,6 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     }
 
     public static int getImageId(Context context, String imageName) {
-        Log.e("[IMAGE NAME]", imageName);
-        Log.e("[IMAGE INDEX]", context.getResources().getIdentifier("drawable/" + imageName, null, context.getPackageName()) + "");
         return context.getResources().getIdentifier("drawable/" + imageName, null, context.getPackageName());
     }
 

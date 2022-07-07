@@ -54,25 +54,45 @@ public class MyDB extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO ACCOUNTS(UserId, Username, Password, RoleId) VALUES(2, 'admin', 'admin', 2)");
 
         db.execSQL("insert into PRODUCTS(ProductName, Price, Quantity, SoldQuantity, Description, Category, Company, Material, Size, Image)" +
-                " VALUES('Giyu Tomioka Nendoroid', 515000, 20 , 12,'Mô hình đẹp phù hợp với mọi lứa tuổi','Anime', 'HotToys', 'ABS, PVC', '15cm', 'pro1');");
+                " VALUES('Giyu Tomioka Nendoroid', 355000, 20 , 12," +
+                "'Giyu Tomioka từ Demon Slayer: Kimetsu no Yaiba sẽ tham gia Nendoroid Swacchao mới! hàng loạt! Nendoroid Swacchao! figure có Nendoroid đang ngồi trên ghế, giúp bạn dễ dàng trưng bày chúng trên bàn, kệ hoặc những khu vực chật hẹp về không gian. Các số liệu thậm chí có thể được hiển thị trên các cạnh của bàn hoặc kệ của bạn, vì vậy hãy tận hưởng thu thập và trưng bày chúng ở mọi nơi.'," +
+                "'Anime', 'Good Smile Company', 'ABS, PVC', '9 cm', 'pro1');");
         db.execSQL("insert into PRODUCTS(ProductName, Price, Quantity, SoldQuantity, Description, Category, Company, Material, Size, Image)" +
-                " VALUES('Hatake Kakashi Nendoroid', 515000, 20 , 12,'Mô hình đẹp phù hợp với mọi lứa tuổi','Anime', 'HotToys', 'ABS, PVC','15cm', 'pro2');");
+                " VALUES('Hatake Kakashi Nendoroid', 425000, 20 , 12," +
+                "'Từ loạt phim hoạt hình nổi tiếng Naruto Shippuden, Nendoroid của Kakashi Hatake từ thời của anh ấy trong Anbu Black Ops! Anh ấy đi kèm với hai tấm che mặt có thể hoán đổi cho nhau, một tấm che mặt tiêu chuẩn và một tấm che mặt lóa. Mặt nạ cáo của anh ấy cũng có thể tháo rời.'," +
+                "'Anime', 'HotToys', 'ABS, PVC','9 cm', 'pro2');");
         db.execSQL("insert into PRODUCTS(ProductName, Price, Quantity, SoldQuantity, Description, Category, Company, Material, Size, Image)" +
-                " VALUES('Katsuki Bakugo Nendoroid', 515000, 20 , 12,'Mô hình đẹp phù hợp với mọi lứa tuổi','Anime', 'HotToys', 'ABS, PVC','15cm', 'pro3');");
+                " VALUES('Katsuki Bakugo Nendoroid', 520000, 20 , 12," +
+                "'Từ loạt phim hoạt hình nổi tiếng My Hero Academia, Nendoroid của nhân vật chính là bạn thời thơ ấu của Deku và là đối thủ của Katsuki Bakugo trong trang phục mùa đông của anh ấy! Anh ấy có ba biểu cảm khuôn mặt bao gồm biểu cảm cười toe toét, biểu cảm chiến đấu và biểu cảm sửng sốt! Các bộ phận hiệu ứng để tái hiện Cú cười bùng nổ của anh ấy cùng với bảng chữ BOOOM cũng được bao gồm để tạo ra các tư thế hành động ấn tượng hơn nữa! Thích tạo tất cả các loại cảnh khác nhau từ bộ truyện!'," +
+                "'Anime', 'Takara Tomy', 'ABS, PVC','10 cm', 'pro3');");
         db.execSQL("insert into PRODUCTS(ProductName, Price, Quantity, SoldQuantity, Description, Category, Company, Material, Size, Image)" +
-                " VALUES('Kyojuro Rengoku Nendoroid', 515000, 20 , 12,'Mô hình đẹp phù hợp với mọi lứa tuổi','Anime', 'HotToys', 'ABS, PVC','15cm', 'pro4');");
+                " VALUES('Kyojuro Rengoku Nendoroid', 325000, 20 , 12," +
+                "'Kyojuro Rengoku từ Demon Slayer: Kimetsu no Yaiba sẽ gia nhập Nendoroid Swacchao mới! hàng loạt! Nendoroid Swacchao! figure có Nendoroid đang ngồi trên ghế, giúp bạn dễ dàng trưng bày chúng trên bàn, kệ hoặc những khu vực chật hẹp về không gian. Các số liệu thậm chí có thể được hiển thị trên các cạnh của bàn hoặc kệ của bạn, vì vậy hãy tận hưởng thu thập và trưng bày chúng ở mọi nơi.'," +
+                "'Anime', 'Good Smile Company', 'ABS, PVC','9 cm', 'pro4');");
         db.execSQL("insert into PRODUCTS(ProductName, Price, Quantity, SoldQuantity, Description, Category, Company, Material, Size, Image)" +
-                " VALUES('Nobara Kugisaki Nendoroid', 515000, 20 , 12,'Mô hình đẹp phù hợp với mọi lứa tuổi','Anime', 'HotToys', 'ABS, PVC','15cm', 'pro5');");
+                " VALUES('Nobara Kugisaki Nendoroid', 325000, 20 , 12," +
+                "'Nobara Kugisaki từ Jujutsi Kaisen sẽ gia nhập Nendoroid Swacchao mới! hàng loạt!'," +
+                "'Anime', 'Good Smile Company', 'ABS, PVC','9 cm', 'pro5');");
         db.execSQL("insert into PRODUCTS(ProductName, Price, Quantity, SoldQuantity, Description, Category, Company, Material, Size, Image)" +
-                " VALUES('Megumi Fushiguro Nendoroid', 515000, 20 , 12,'Mô hình đẹp phù hợp với mọi lứa tuổi','Anime', 'HotToys', 'ABS, PVC','15cm', 'pro6');");
+                " VALUES('Megumi Fushiguro Nendoroid', 325000, 20 , 12," +
+                "'Megumi Fushiguro từ Jujutsi Kaisen sẽ gia nhập Nendoroid Swacchao mới! hàng loạt!'," +
+                "'Anime', 'Good Smile Company', 'ABS, PVC','9 cm', 'pro6');");
         db.execSQL("insert into PRODUCTS(ProductName, Price, Quantity, SoldQuantity, Description, Category, Company, Material, Size, Image)" +
-                " VALUES('Satoru Gojo Nendoroid', 515000, 20 , 12,'Mô hình đẹp phù hợp với mọi lứa tuổi','Anime', 'HotToys', 'ABS, PVC','15cm', 'pro7');");
+                " VALUES('Satoru Gojo Nendoroid', 325000, 20 , 12," +
+                "'Satoru Gojo từ Jujutsi Kaisen sẽ gia nhập Nendoroid Swacchao mới! hàng loạt!'," +
+                "'Anime', 'Good Smile Company', 'ABS, PVC','9 cm', 'pro7');");
         db.execSQL("insert into PRODUCTS(ProductName, Price, Quantity, SoldQuantity, Description, Category, Company, Material, Size, Image)" +
-                " VALUES('Shinobu Kocho Nendoroid', 515000, 20 , 12,'Mô hình đẹp phù hợp với mọi lứa tuổi','Anime', 'HotToys', 'ABS, PVC','15cm', 'pro8');");
+                " VALUES('Shinobu Kocho Nendoroid', 350000, 20 , 12," +
+                "'Shinobu Kocho từ Demon Slayer: Kimetsu no Yaiba sẽ gia nhập Nendoroid Swacchao mới! hàng loạt!'," +
+                "'Anime', 'Good Smile Company', 'ABS, PVC','9 cm', 'pro8');");
         db.execSQL("insert into PRODUCTS(ProductName, Price, Quantity, SoldQuantity, Description, Category, Company, Material, Size, Image)" +
-                " VALUES('Sukuna Nendoroid', 515000, 20 , 12,'Mô hình đẹp phù hợp với mọi lứa tuổi','Anime', 'HotToys', 'ABS, PVC','15cm', 'pro9');");
+                " VALUES('Sukuna Nendoroid', 350000, 20 , 12," +
+                "'Sukuna từ Jujutsu Kaisen sẽ gia nhập Nendoroid Swacchao mới! hàng loạt!'," +
+                "'Anime', 'Good Smile Company', 'ABS, PVC','9 cm', 'pro9');");
         db.execSQL("insert into PRODUCTS(ProductName, Price, Quantity, SoldQuantity, Description, Category, Company, Material, Size, Image)" +
-                " VALUES('Yuji Itadori Nendoroid', 515000, 20 , 12,'Mô hình đẹp phù hợp với mọi lứa tuổi','Anime', 'HotToys', 'ABS, PVC','15cm', 'pro10');");
+                " VALUES('Yuji Itadori Nendoroid', 350000, 20 , 12," +
+                "'Yuji Itadori từ Jujutsu Kaisen sẽ gia nhập Nendoroid Swacchao mới! hàng loạt!'," +
+                "'Anime', 'Good Smile Company', 'ABS, PVC','10 cm', 'pro10');");
 
     }
 

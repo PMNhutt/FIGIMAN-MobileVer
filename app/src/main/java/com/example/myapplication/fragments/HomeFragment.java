@@ -59,22 +59,6 @@ public class HomeFragment extends Fragment {
         return  mView;
     }
 
-    private List<Product> getListProduct() {
-        List<Product> list = new ArrayList<>();
-//        list.add(new Product(R.drawable.pro1, "Giyu Tomioka Nendoroid", "515,000"));
-//        list.add(new Product(R.drawable.pro2, "Hatake Kakashi Nendoroid", "650,000"));
-//        list.add(new Product(R.drawable.pro3, "Katsuki Bakugo Nendoroid", "515,000"));
-//        list.add(new Product(R.drawable.pro4, "Kyojuro Rengoku Nendoroid", "515,000"));
-//        list.add(new Product(R.drawable.pro5, "Nobara Kugisaki Nendoroid ", "350,000"));
-//        list.add(new Product(R.drawable.pro6, "Megumi Fushiguro Nendoroid", "515,000"));
-//        list.add(new Product(R.drawable.pro7, "Satoru Gojo Nendoroid", "515,000"));
-//        list.add(new Product(R.drawable.pro8, "Shinobu Kocho Nendoroid", "515,000"));
-//        list.add(new Product(R.drawable.pro9, "Sukuna Nendoroid", "515,000"));
-//        list.add(new Product(R.drawable.pro10, "Yuji Itadori Nendoroid ", "515,000"));
-
-        return list;
-    }
-
     private void onClickShowDetail (Product product) {
         Intent intent = new Intent(getActivity(), ProductDetail.class);
         Bundle bundle = new Bundle();
