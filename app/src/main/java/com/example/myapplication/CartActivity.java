@@ -2,40 +2,14 @@ package com.example.myapplication;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Home extends AppCompatActivity {
-    // LAB4
-
-//    TextView loginName;
-//    Button closeBtn;
-
-    //============== lab 4 code ==================================================
-
-//    @Override
-//    public void finish() {
-//        Intent intent = new Intent(Home.this, Login.class);
-//        intent.putExtra("Logout", "bạn đã đăng xuất thành công");
-//        setResult(1, intent);
-//        super.finish();
-//
-//    }
+public class CartActivity extends AppCompatActivity {
 
     private ViewPager2 mViewPager2;
     private BottomNavigationView mBottomNavigation;
@@ -43,11 +17,10 @@ public class Home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_cart);
 
-
-        mViewPager2 = findViewById(R.id.viewPager2);
-        mBottomNavigation = findViewById(R.id.bottomNavigation);
+        mViewPager2 = findViewById(R.id.viewPager2cart);
+        mBottomNavigation = findViewById(R.id.bottomNavigationcart);
 
         //add 3 fragments to view pager
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this);
@@ -87,8 +60,5 @@ public class Home extends AppCompatActivity {
                 }
             }
         });
-
     }
-
-
 }

@@ -7,7 +7,11 @@
         <entry key="..\:/StudioProjects/FIGIMAN/app/src/main/res/drawable/add_icon.xml" value="0.127" />
         <entry key="..\:/StudioProjects/FIGIMAN/app/src/main/res/drawable/devider.xml" value="0.207" />
         <entry key="..\:/StudioProjects/FIGIMAN/app/src/main/res/drawable/ic_launcher_background.xml" value="0.207" />
+        <entry key="..\:/StudioProjects/FIGIMAN/app/src/main/res/drawable/my_button.xml" value="0.2095" />
+        <entry key="..\:/StudioProjects/FIGIMAN/app/src/main/res/drawable/my_remove_btn.xml" value="0.2095" />
+        <entry key="..\:/StudioProjects/FIGIMAN/app/src/main/res/drawable/remove_icon.xml" value="0.2095" />
         <entry key="..\:/StudioProjects/FIGIMAN/app/src/main/res/drawable/subtrac_icon.xml" value="0.127" />
+        <entry key="..\:/StudioProjects/FIGIMAN/app/src/main/res/layout/activity_cart.xml" value="0.24375" />
         <entry key="..\:/StudioProjects/FIGIMAN/app/src/main/res/layout/activity_home.xml" value="0.259375" />
         <entry key="..\:/StudioProjects/FIGIMAN/app/src/main/res/layout/activity_login.xml" value="0.259375" />
         <entry key="..\:/StudioProjects/FIGIMAN/app/src/main/res/layout/activity_main.xml" value="0.264" />
@@ -17,6 +21,7 @@
         <entry key="..\:/StudioProjects/FIGIMAN/app/src/main/res/layout/fragment_cart.xml" value="0.259375" />
         <entry key="..\:/StudioProjects/FIGIMAN/app/src/main/res/layout/fragment_home.xml" value="0.259375" />
         <entry key="..\:/StudioProjects/FIGIMAN/app/src/main/res/layout/fragment_user.xml" value="0.259375" />
+        <entry key="..\:/StudioProjects/FIGIMAN/app/src/main/res/layout/item_admin_product.xml" value="0.264" />
         <entry key="..\:/StudioProjects/FIGIMAN/app/src/main/res/layout/item_cart.xml" value="0.264" />
         <entry key="..\:/StudioProjects/FIGIMAN/app/src/main/res/layout/item_product.xml" value="0.2453125" />
         <entry key="..\:/StudioProjects/FIGIMAN/app/src/main/res/layout/myactionbar.xml" value="0.536" />

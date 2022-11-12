@@ -2,28 +2,43 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
+import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.myapplication.fragments.CartFragment;
-import com.example.myapplication.fragments.HomeFragment;
+import com.example.myapplication.my_interfaces.ICartItemListener;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
+import java.lang.reflect.Type;
+import java.util.List;
+
+import Model.Cart;
 import Model.Product;
 
-public class ProductDetail extends AppCompatActivity {
+public class ProductDetail extends AppCompatActivity{
+
+    public ICartItemListener iCartItemListener;
+    private CartAdapter cartAdapter;
+
 
     public static int getImageId(Context context, String imageName) {
         return context.getResources().getIdentifier("drawable/" + imageName, null, context.getPackageName());
@@ -85,11 +100,13 @@ public class ProductDetail extends AppCompatActivity {
             }
         });
 
-        //add to cart (push notification)
+        //add to cart (push notification & add to cart)
         Intent cartView = new Intent(this, Register.class);
         addToCartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                // Notification
                 String CHANNEL_ID = "chanel_id";
                 CharSequence name= "chanel_name";
 
@@ -111,7 +128,52 @@ public class ProductDetail extends AppCompatActivity {
                     manager.createNotificationChannel(mychannel);
                 }
                 manager.notify(0, builder);
+
+
+                // Handle add to cart
+                onClickAddToCart(pro);
+
             }
         });
+
+
+    }
+    private void onClickAddToCart (Product product) {
+
+        SharedPreferences prefs = getSharedPreferences("SHARED_PREFS_FILE", Context.MODE_PRIVATE);
+        Gson gson = new Gson();
+        String json = prefs.getString("product_cart_data", "");
+        Type type = new TypeToken<List<Cart>>() {}.getType();
+        List<Cart> list = gson.fromJson(json, type);
+
+        boolean isExisted = false;
+        double quantity = 0;
+        for (Cart item:list) {
+            if (item.getProductId() == product.getProId()) {
+                isExisted = true;
+                quantity = item.getQuantity();
+                Log.d(String.valueOf(this), item.getQuantity() + "");
+            } else {
+                isExisted = false;
+            }
+        }
+
+        Cart newCartItem;
+        if (isExisted == true) {
+            iCartItemListener.DeleteCart(product.getProId());
+            quantity+=1;
+            newCartItem = new Cart(product.getProId(), product.getName(), product.getImg(), (int) quantity);
+        } else {
+            newCartItem = new Cart(product.getProId(), product.getName(), product.getImg(), 1);
+        }
+        list.add(newCartItem);
+
+
+
+        json = gson.toJson(list);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("product_cart_data", json);
+        editor.commit();
+
     }
 }

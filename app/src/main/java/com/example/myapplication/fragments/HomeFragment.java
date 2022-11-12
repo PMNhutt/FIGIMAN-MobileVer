@@ -1,12 +1,17 @@
 package com.example.myapplication.fragments;
 
-import android.content.Context;
+import android.app.Activity;
+import android.app.Instrumentation;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -23,11 +28,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import DAO.ProductDAO;
+import Model.Cart;
 import Model.Product;
 
 public class HomeFragment extends Fragment {
 
-    private  View mView;
+    private View mView;
     private RecyclerView recyProduct;
     private ProductAdapter productAdapter;
     private Home homeActivity;
@@ -58,6 +64,23 @@ public class HomeFragment extends Fragment {
 
         return  mView;
     }
+
+//    ActivityResultLauncher<Intent> launcher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+//            new ActivityResultCallback<ActivityResult>() {
+//                @Override
+//                public void onActivityResult(ActivityResult result) {
+//                    if (result.getResultCode() == Activity.RESULT_OK){
+//                        Intent intent = result.getData();
+//                        Bundle bundle = getActivity().getIntent().getExtras();
+//                        if (bundle == null) {
+//                            return;
+//                        }
+////                        Product pro = (Product) bundle.get("product_cart_data");
+////                        Product pro = (Product) intent.getBundleExtra("product_cart_data");
+//                    }
+//                }
+//            });
+
 
     private void onClickShowDetail (Product product) {
         Intent intent = new Intent(getActivity(), ProductDetail.class);

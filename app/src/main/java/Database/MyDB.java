@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 
 public class MyDB extends SQLiteOpenHelper {
     public MyDB(@Nullable Context context) {
-        super(context, "FIGIMAN4", null, 2);
+        super(context, "FIGIMAN5", null, 1);
     }
 
     @Override
@@ -42,10 +42,14 @@ public class MyDB extends SQLiteOpenHelper {
                 "\"Size\"\tTEXT, " +
                 "\"Image\"\tTEXT, " +
                 "PRIMARY KEY(\"ProductId\"));";
+        String tblCarts = "CREATE TABLE \"CARTS\" (\"CartId\"\tINTEGER NOT NULL,\"UserId\"\tINTEGER NOT NULL,\"IsPaid\"\tINTEGER NOT NULL DEFAULT 0 CHECK('IsPaid' >= 0),PRIMARY KEY(\"CartId\"));";
+        String tblCartDetails = "CREATE TABLE \"CARTDETAILS\" (\"Id\"\tINTEGER NOT NULL,\"CartId\"\tINTEGER NOT NULL,\"ProductId\"\tINTEGER NOT NULL,\"Quantity\"\tINTEGER NOT NULL DEFAULT 1 CHECK('Quantity' > 0),PRIMARY KEY(\"Id\"),FOREIGN KEY(\"CartId\") REFERENCES \"ACCOUNTS\"(\"UserId\"),FOREIGN KEY(\"ProductId\") REFERENCES \"PRODUCTS\"(\"ProductId\"));";
 
         db.execSQL(tblProducts);
         db.execSQL(tblRoles);
         db.execSQL(tblAccounts);
+        db.execSQL(tblCarts);
+        db.execSQL(tblCartDetails);
 
         db.execSQL("INSERT INTO ROLES VALUES(1, 'USER')");
         db.execSQL("INSERT INTO ROLES VALUES(2, 'ADMIN')");
@@ -94,6 +98,13 @@ public class MyDB extends SQLiteOpenHelper {
                 "'Yuji Itadori từ Jujutsu Kaisen sẽ gia nhập Nendoroid Swacchao mới! hàng loạt!'," +
                 "'Anime', 'Good Smile Company', 'ABS, PVC','10 cm', 'pro10');");
 
+
+        db.execSQL("INSERT INTO CARTS VALUES(1, 1, 0)");
+        db.execSQL("INSERT INTO CARTS VALUES(2, 1, 1)");
+
+        db.execSQL("INSERT INTO CARTDETAILS VALUES(1, 1, 1, 3)");
+        db.execSQL("INSERT INTO CARTDETAILS VALUES(2, 2, 5, 2)");
+
     }
 
     @Override
@@ -101,6 +112,8 @@ public class MyDB extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS ACCOUNTS");
         db.execSQL("DROP TABLE IF EXISTS ROLES");
         db.execSQL("DROP TABLE IF EXISTS PRODUCTS");
+        db.execSQL("DROP TABLE IF EXISTS CARTS");
+        db.execSQL("DROP TABLE IF EXISTS CARTDETAILS");
         onCreate(db);
     }
 }
